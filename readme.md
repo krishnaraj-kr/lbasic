@@ -33,3 +33,7 @@ To add a column in an existing table
 ```cmd
 php artisan make:migration add_excerpt_to_articles_table --table="articles"
 ```
+To rollback the changes after adding a column, that is to drop a colums a special composer package needed
+```cmd
+composer require doctrine/dbal
+``
