@@ -18,7 +18,10 @@ For any help
 ```
 php artisan help make:controller
 ```
-
+To redirect to 404 page
+```php
+abort(404);
+```
 
 ### Migration
 To Migrate tables
