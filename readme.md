@@ -45,7 +45,7 @@ composer require doctrine/dbal
 
 Form creation: use a new HTML builder
 ```
-composer require illuminate/html
+composer require laravelcollective/html
 ```
 
 
