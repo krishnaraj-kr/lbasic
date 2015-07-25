@@ -40,3 +40,15 @@ To rollback the changes after adding a column, that is to drop a colums a specia
 ```
 composer require doctrine/dbal
 ```
+
+### Views
+
+Form creation: use a new HTML builder
+```
+composer require illuminate/html
+```
+
+
+
+
+
