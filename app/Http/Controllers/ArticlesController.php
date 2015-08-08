@@ -6,7 +6,7 @@ use wonders\Article;
 
 //use Request;
 use Carbon\Carbon;
-use wonders\Http\Requests\CreateArticleRequest;
+use wonders\Http\Requests\ArticleRequest;
 
 use wonders\Http\Requests;
 use wonders\Http\Controllers\Controller;
@@ -40,12 +40,28 @@ class ArticlesController extends Controller
     }
 
     //Create Store
-    public function store(CreateArticleRequest $request)
+    public function store(ArticleRequest $request)
     {
         //$input = Request::all();
         //$input['published_at'] = Carbon::now();
         Article::create($request->all());
         return redirect('articles');
     }
+
+    //Edit Aricle
+    public function edit($id)
+    {
+        $article = Article::findOrFail($id);
+        return view('articles.edit', compact('article'));
+    }
+    //Update Article 
+    public function update($id, ArticleRequest $request)
+    {
+        $article = Article::findOrFail($id);
+        $article->update($request->all());
+
+        return redirect('articles');
+    }
+
 
 }
