@@ -48,7 +48,13 @@ Form creation: use a new HTML builder
 composer require laravelcollective/html
 ```
 
+### Form Validation
 
-
-
+Form request method
+```
+php artisan make:request CreateArticleRequest
+```
+File will be generate in root > app > Http > Requests > CreateArticleRequest.php
+In that file there will be two functions - authorize() & rules().
+Validation rules ref: [available-validation-rules](http://laravel.com/docs/5.1/validation#available-validation-rules)
 
