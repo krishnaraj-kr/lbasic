@@ -58,3 +58,10 @@ File will be generate in root > app > Http > Requests > CreateArticleRequest.php
 In that file there will be two functions - authorize() & rules().
 Validation rules ref: [available-validation-rules](http://laravel.com/docs/5.1/validation#available-validation-rules)
 
+
+### Notes
+
+To encrypt password
+```
+$user->password = bcrypt('password');
+```
